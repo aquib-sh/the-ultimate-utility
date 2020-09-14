@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="css/qr_code.css">
+        <meta name="viewport" content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0'/>
+        <meta http-equiv="Content-Security-Policy" 
+        content="
+            worker-src blob:; 
+            child-src blob: gap:;
+            img-src 'self' blob: data:;
+            style-src 'self' http://* 'unsafe-inline';
+            script-src 'self' http://* 'unsafe-inline' 'unsafe-eval';
+            default-src * 'self' 'unsafe-inline' 'unsafe-eval' data: gap: content:">
+
+    </head>
+    <body>
+        <textarea type="text" id="data" placeholder="enter data to be converted into qr code"></textarea>
+        <input type="button" id="execute" value="Create">
+        <img src="img/white.jpg" id="result" >
+    
+        <script src="js/qr_code.js"></script>
+        
+    </body>
+</html>
+

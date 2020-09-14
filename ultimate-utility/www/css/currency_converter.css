@@ -1,0 +1,86 @@
+h2 {
+    font-size:8vw ;
+}
+
+label {
+    font-size: 5vw;
+}
+
+body {
+    background-color: wheat;
+    font-family: monospace;
+    
+}
+
+#app {
+    position: absolute;
+
+    padding-top: 100%;
+    padding-bottom: 50%;
+    padding-right: 94%;
+    border: 5px black outset;
+}
+
+#logo {
+    background: paleturquoise;
+    padding: 2vw;
+    border: black 5px outset;
+}
+
+select {
+    width: 50vw;
+    height: 10vw;
+}
+
+option p{
+    font-size: 10vw;
+
+}
+
+#from {
+    position: absolute;
+    top: 10vw;
+    left: 20vw;
+}
+
+#to {
+    position: absolute;
+    top: 30vw;
+    left: 20vw;
+    
+
+}
+
+#convert {
+    position: absolute;
+    top: 120vw;
+    left: 35vw;
+    height: 10vw;
+    width: 25vw;
+    font-size: 4vw;
+    font-family: monospace;
+    border: outset 5px orange;
+}
+
+#result {
+    position: absolute;
+    top: 108vw;
+    left: 5vw;
+}
+
+#result_val {
+    width: 92vw;
+    left: 0vw;
+    font-size: 4vw;
+    font-family: monospace;
+    background-color: wheat;
+
+
+}
+
+#amount {
+    position: absolute;
+    font-family: monospace;
+    top:90vw;
+    left: 23vw;
+}

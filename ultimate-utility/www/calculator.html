@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0'/>
+        <link rel="stylesheet" href="css/calculator.css">
+    </head>
+
+    <body>
+    <div class="calculator">
+     <div class="calculator_items">
+         <input type=text class="entry" id=entry placeholder="0" disabled > 
+        <table>
+            <tr>
+                <td> <input type=button class="square" id=square value="x²"></td> 
+                <td> <input type=button class="1byx" id=1byx value="¹/ₓ" > </td> 
+                <td> <input type=button class="squareroot" id=squareroot value="²√" > </td>
+                <td> <input type=button class="backspace" id=backspace value="X"> </td> 
+             </tr>    
+         <tr>
+            <td> <input type=button class="clear" id=clear value="C"> 
+            <td> <input type=button class="operators division" id=division value="/" > </td> 
+            <td> <input type=button class="operators multiply" id=multiply value="*" > </td>
+            <td> <input type=button class="operators subtraction" id=subtraction value="-"> </td> 
+         </tr>      
+         <tr>
+            <td> <input type=button class="number_button row1 column1" id=7 value="7"> </td>
+            <td> <input type=button class="number_button row1 column2" id=8 value="8"> </td>
+            <td> <input type=button class="number_button row1 column3" id=9 value="9"> </td>
+            <td> <input type=button class="operators addition" id=addition value="+">  </td> 
+         </tr>
+         <tr>    
+            <td> <input type=button class="number_button row2 column1" id=4 value="4"> </td>
+            <td> <input type=button class="number_button row2 column2" id=5 value="5"> </td>
+            <td> <input type=button class="number_button row2 column3" id=6 value="6"> </td>
+            <td rowspan="2"> <input type=button class="equal" id=equal value="="> </td> 
+
+
+        </tr>
+         <tr>    
+            <td> <input type=button class="number_button row3 column1" id=1 value="1"> </td>
+            <td> <input type=button class="number_button row3 column2" id=2 value="2">  </td>
+            <td> <input type=button class="number_button row3 column3" id=3 value="3"> </td>
+         </tr>
+         <tr>
+            <td colspan="2"> <input type=button class="number_button " id=zero value="0"> </td>
+            <td> <input type=button class="dot" id=dot value="."> </td>
+            <td> <input type=button class="modulus" id=modulus value="%"> </td>
+        </tr> 
+      </table>
+        </div>    
+      </div> 
+       <script src=js/calculator.js></script> 
+
+
+    </body>
+</html>

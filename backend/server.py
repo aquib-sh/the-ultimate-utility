@@ -3,9 +3,23 @@ from flask_restful import fields, Resource, reqparse, marshal_with, Api
 from remote_terminal import Terminal
 from qr import QR
 from lookup import IPLookup, NSLookup
+from flask_cors import CORS
 
 app = Flask(__name__)
+app.config['ENV'] = 'production'
+
 api = Api(app)
+
+cors = CORS(app, resources={r"/*": {"origins": "*"}})
+
+
+#@app.after_request
+#
+#def after_request(response):
+#  response.headers.add('Access-Control-Allow-Origin', '*')
+#  response.headers.add('Access-Control-Allow-Headers', 'Content-Type,Authorization,command')
+#  response.headers.add('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE')
+#  return response
 
 # Remote-terminal POST request arguments
 terminal_args = reqparse.RequestParser()
@@ -26,7 +40,7 @@ class RemoteTerminal(Resource):
     def post(self):
         args = terminal_args.parse_args()
         output =  self.terminal.execute(args['command'])
-        return output, 201
+        return output, 201,{'Access-Control-Allow-Origin': '*'}
 
 class QRCode(Resource):
     def __init__(self):
@@ -56,4 +70,4 @@ api.add_resource(QRCode,"/qr")
 api.add_resource(Lookup,"/lookup/<string:type_>")
 
 if __name__ == "__main__":
-    app.run(debug=True, host="0.0.0.0")
+    app.run(host="0.0.0.0")

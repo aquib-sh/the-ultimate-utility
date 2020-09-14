@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="css/currency_converter.css">
+    <meta name="viewport" content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0'/>
+    <meta http-equiv="Content-Security-Policy" content="default-src *; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' 'unsafe-eval'">
+
+  </head>
+<body>
+
+<div id=logo>
+  <h2><center>CURRENCY CONVERTER</center></h2>
+  
+</div>
+<hr>
+
+<div id="app">
+  <div id=from>
+    <label for="currency">CONVERT FROM:</label><br>
+    <select id="currency" name="currency" >
+      <option value="USD">USD</option>
+      <option value="GBP">GBP</option>
+      <option value="INR">INR</option>
+      <option value="EUR">EUR</option>
+    </select>
+  </div>
+  <div id=to>
+    <label for="currency_result">TO:</label><br>
+    <select id="currency_result" name="currency_result">
+      <option value="INR">INR</option>
+      <option value="USD">USD</option>
+      <option value="GBP">GBP</option>
+      <option value="EUR">EUR</option>
+    </select>
+    <br>
+  </div>
+</div>
+
+<div id="amount">
+  <input type="text" id="amount_wanted" placeholder="Enter amount">
+</div>
+<div id=result >
+  <span id="result_val"></span>
+</div>
+
+<input type="button" id=convert value="CONVERT">
+
+<script src="js/currency_converter.js"></script>
+
+</body>
+</html>

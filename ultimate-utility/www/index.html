@@ -1,0 +1,50 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="css/index.css">
+        <meta name="viewport" content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0'/>
+        <meta http-equiv="Content-Security-Policy" content="default-src *; style-src 'self' http://* 'unsafe-inline'; script-src 'self' http://* 'unsafe-inline' 'unsafe-eval'" />
+        <script>
+            window.onload = function() {
+                document.getElementById("ip_submit").onclick=function () {storeIP()}
+            }
+            
+            function storeIP() {
+                let ip_value = document.getElementById("ip_box").value;
+                var localStorage = window.localStorage;
+                if (typeof(Storage) !== "undefined") {
+                    localStorage.setItem("address",ip_value);
+                }
+                let stored_value = localStorage.getItem("address")
+                console.log("The value stored is "+ stored_value);
+                document.getElementById("ip_box").value = "";
+                document.getElementById("current_ip").innerHTML = "connected to "+stored_value;
+            }
+        </script>
+    </head>
+
+    <body>
+
+        <div id="logo">
+            <img src="img/logo1.png"></img>
+            <h1>TIGRIS</h1>
+            <i><strong>A perfect productivity tool</strong></i>
+            <hr>
+        </div>
+
+        <div id="ip" >
+            <input type="text" id="ip_box" placeholder="Local IP Address of Computer">
+            <input type="button" id="ip_submit" value="connect" >
+            <br>
+            <span id="current_ip"></span>
+        </div>
+
+         <div id="items">
+            <input type="image" src="img/terminal.png" id=terminal onclick="window.location.href='terminal.html'">
+            <input type="image" src="img/calculator.png" id=calc onclick="window.location.href='calculator.html'">
+            <input type="image" src="img/iplookup.png" id=iplookup onclick="window.location.href='ip_lookup.html'">
+            <input type="image" src="img/nslookup.png" id=nslookup onclick="window.location.href='dns_lookup.html'">
+            <input type="image" src="img/code.png" id=qrcode onclick="window.location.href='qr_code.html'">
+            <input type="image" src="img/currency.png" id=currency onclick="window.location.href='currency_converter.html'">
+        </div>
+    </body>
+</html>
